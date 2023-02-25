@@ -1,0 +1,24 @@
+{
+  "name": "openui5-basic-template-app",
+  "version": "0.1.0",
+  "description": "Best-practice starting point for building a freestyle app",
+  "private": true,
+  "scripts": {
+    "start": "ui5 serve",
+    "lint": "eslint webapp",
+    "karma": "karma start",
+    "karma-ci": "karma start karma-ci.conf.js",
+    "watch": "npm run karma",
+    "test": "npm run lint && rimraf coverage && npm run karma-ci",
+    "build": "rimraf dist && ui5 build --a"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^2.14.2",
+    "eslint": "^8.6.0",
+    "karma": "^6.3.10",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.1.0",
+    "karma-ui5": "^2.4.0",
+    "rimraf": "^3.0.2"
+  }
+}
