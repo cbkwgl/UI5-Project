@@ -21,8 +21,6 @@ sap.ui.require(
           country: "Forget it.",
           zip: "Waste of time.",
         },
-        salesAmount: 12345.6789,
-        currencyCode: "EUR",
       });
 
       // Assign the model object to the SAPUI5 core
@@ -39,15 +37,9 @@ sap.ui.require(
       sap.ui.getCore().setModel(oResourceModel, "i18n");
 
       // Display the XML view called "App"
-      var oView = new XMLView({
+      new XMLView({
         viewName: "sap.ui.demo.db.view.App",
-      });
-
-      // Register the view with the message manager
-      sap.ui.getCore().getMessageManager().registerObject(oView, true);
-
-      // Insert the view into the DOM
-      oView.placeAt("content");
+      }).placeAt("content");
     });
   }
 );
