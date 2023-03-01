@@ -67,34 +67,6 @@ sap.ui.define(
           }
         });
       },
-      onDelete: function () {
-        var oContext,
-          oSelected = this.byId("peopleList").getSelectedItem(),
-          sUserName;
-
-        if (oSelected) {
-          oContext = oSelected.getBindingContext();
-          sUserName = oContext.getProperty("UserName");
-          oContext.delete().then(
-            function () {
-              MessageToast.show(
-                this._getText("deletionSuccessMessage", sUserName)
-              );
-            }.bind(this),
-            function (oError) {
-              this._setUIChanges();
-              if (oError.canceled) {
-                MessageToast.show(
-                  this._getText("deletionRestoredMessage", sUserName)
-                );
-                return;
-              }
-              MessageBox.error(oError.message + ": " + sUserName);
-            }.bind(this)
-          );
-          this._setUIChanges(true);
-        }
-      },
       onInputChange: function (oEvt) {
         if (oEvt.getParameter("escPressed")) {
           this._setUIChanges();
