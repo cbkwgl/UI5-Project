@@ -165,46 +165,6 @@
 														</f:formContainers>
 													</f:Form>
 												</FlexBox>
-												<Table id="friendsTable" width="auto" items="{path: 'Friends',
-															parameters: {
-																$$ownRequest: true
-															}}" noDataText="No Data" class="sapUiSmallMarginBottom">
-													<headerToolbar>
-														<Toolbar>
-															<Title text="Friends" titleStyle="H3" level="H3"/>
-														</Toolbar>
-													</headerToolbar>
-													<columns>
-														<Column>
-															<Text text="User Name"/>
-														</Column>
-														<Column>
-															<Text text="First Name"/>
-														</Column>
-														<Column>
-															<Text text="Last Name"/>
-														</Column>
-														<Column>
-															<Text text="Age"/>
-														</Column>
-													</columns>
-													<items>
-														<ColumnListItem>
-															<cells>
-																<Text text="{UserName}"/>
-															</cells>
-															<cells>
-																<Text text="{FirstName}"/>
-															</cells>
-															<cells>
-																<Text text="{LastName}"/>
-															</cells>
-															<cells>
-																<Text text="{Age}"/>
-															</cells>
-														</ColumnListItem>
-													</items>
-												</Table>
 											</VBox>
 										</semantic:content>
 									</semantic:SemanticPage>
